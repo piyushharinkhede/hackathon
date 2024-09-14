@@ -1,0 +1,38 @@
+.details-container{
+    padding: 40px;
+    background-color: white;
+    min-width: 25%;   
+    width: fit-content; 
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+
+.dimg{
+    width: 350px;
+}
+
+.body_3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+    background-image: url('./files/img4.jpeg');
+    background-size: 100%;
+    height: 100vh;
+}
+
+.btnct{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.btnct:hover{
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
