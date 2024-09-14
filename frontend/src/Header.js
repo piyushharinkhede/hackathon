@@ -27,7 +27,7 @@ const Header = () => {
       <div className='headerdiv'>
         <div className='samplebox'></div>
         <div className='samplebox'>
-          <a href='/'><h1 className='tlheading'>PropLink</h1></a>
+          <a href='/'><h1 className='tlheading'>Hommies</h1></a>
         </div>
         <div className='samplebox'></div>
         <div className='samplebox'>
