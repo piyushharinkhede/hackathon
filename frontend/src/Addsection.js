@@ -45,7 +45,7 @@ const Addsection = () => {
 
   const add = async () => {
     try {
-      await fetch('http://localhost:5000/add', {
+      await fetch('https://hackathon-xhtf.onrender.com/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

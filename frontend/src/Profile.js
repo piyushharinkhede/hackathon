@@ -23,7 +23,7 @@ const Profile = () => {
       setCuritem(projects._id);
 
       try{
-        const response = await fetch('http://localhost:5000/delete', {
+        const response = await fetch('https://hackathon-xhtf.onrender.com/delete', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const Profile = () => {
     useEffect(() => {
       const fetchProjects = async () => {
         try {
-          const response = await fetch('http://localhost:5000/userprojects/', {
+          const response = await fetch('https://hackathon-xhtf.onrender.com/userprojects/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

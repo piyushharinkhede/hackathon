@@ -18,7 +18,7 @@ const Featured = () => {
                     <h3 className='phd'>Orchid Casel de Paradise.</h3>
                     <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 <div className='card'>
                     <img className='cardimgs' src={img2}>
@@ -27,7 +27,7 @@ const Featured = () => {
                     <h3 className='phd'>Ruposibangla de parlosia.</h3>
                     <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 <div className='card'>
                     <img className='cardimgs' src={img1}>
@@ -36,7 +36,7 @@ const Featured = () => {
                     <h3 className='phd'>Sinomen Studio Palace.</h3>
                     <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 </div>
 
@@ -48,27 +48,27 @@ const Featured = () => {
 
                     </img>
                     <h3 className='phd'>Orchid Casel de Paradise.</h3>
-                    <p className='location'>Phagwara Punjav</p>
+                    <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 <div className='card'>
                     <img className='cardimgs' src={img2}>
 
                     </img>
                     <h3 className='phd'>Ruposibangla de parlosia.</h3>
-                    <p className='location'>Phagwara Punjav</p>
+                    <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 <div className='card'>
                     <img className='cardimgs' src={img1}>
 
                     </img>
                     <h3 className='phd'>Sinomen Studio Palace.</h3>
-                    <p className='location'>Phagwara Punjav</p>
+                    <p className='location'>Phagwara Punjab</p>
                     <hr></hr>
-                    <p className='price'>Price: $125000</p>
+                    <p className='price'>Price: ₹125000</p>
                 </div>
                 </div>
                 
