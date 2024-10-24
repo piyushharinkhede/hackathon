@@ -12,7 +12,7 @@ const Header = () => {
     navigate('/search');
   }
 
-  
+
 
   return (
     <div>
@@ -30,7 +30,7 @@ const Header = () => {
           <a href='/properties'><h2>Properties</h2></a>
         </div>
         <div className='samplebox'>
-          <a href='/login'><button className='addpy'>Login</button></a>
+          <a href='/login'><h2>Login</h2></a>
         </div>
         
         
