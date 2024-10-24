@@ -1,90 +1,78 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Addsection.css';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 const Addsection = () => {
   const namee = localStorage.getItem('username');
-
-
-
   const [action, setAction] = useState('');
   const [name, setName] = useState('');
   const [phonenumber, setPhonenumber] = useState('');
-  const [date, setAge] = useState('');
   const [link, setLink] = useState('');
   const [address, setAddress] = useState('');
-  const [price, setPrice] = useState('')
-  const [errorMessage, setErrorMessage] = useState(''); // Add state for error message
+  const [price, setPrice] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
-
-  useEffect(()=> {
-    const fetchProfile = async () => {
-      const token = localStorage.getItem('username');
-      
-      if (!token) {
+  useEffect(() => {
+    const checkUser = () => {
+      if (!namee) {
         navigate("/login");
       }
     };
+    checkUser();
+  }, [navigate, namee]);
 
-    fetchProfile();
-  })
-
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (name === '' || address === ''||phonenumber===""||price === ''||link === '') {
+    if (name === '' || address === '' || phonenumber === '' || price === '' || link === '') {
       setErrorMessage('All fields are required');
-      toast.error('All Fields are required')
+      toast.error('All fields are required');
+      return;
+    }
+    if (!isNumber(phonenumber)) {
+      setErrorMessage('Phone number must contain only digits');
+      toast.error('Phone number must contain only digits');
       return;
     }
     if (action === 'signUp') {
-      await add();
+      addProperty();
     }
   };
 
-  const add = async () => {
-    try {
-      await fetch('https://hackathon-xhtf.onrender.com/add', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+  const isNumber = (number) => {
+    return /^\d+$/.test(number);
+  };
 
-
-        body: JSON.stringify({username: namee, name: name, address: address,phonenumber: phonenumber, price: price, link: link})
-      });
-      toast.success('Added Succesful')
-      navigate('/');
-    } catch (error) {
-      console.error('Failed to fetch', error);
-    }
+  const addProperty = () => {
+    toast.success('Added successfully');
+    navigate('/');
   };
 
   return (
     <div className='body2'>
-        <div className="maincont">
+      <div className="maincont">
         <div className='subcont'>
-            <form className="nnp" onSubmit={handleFormSubmit}>
+          <form className="nnp" onSubmit={handleFormSubmit}>
             <label htmlFor="name">Name of the Property:</label>
             <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
             <label htmlFor="pass">Location: </label>
-            <input type="text" id="pass" value={address} onChange={(e) => setAddress(e.target.value)}/>
+            <input type="text" id="pass" value={address} onChange={(e) => setAddress(e.target.value)} />
             <label htmlFor="phonenumber">Phone Number:</label>
             <input type="text" id="phonenumber" value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} />
             <label htmlFor='price'>Price:</label>
             <input type='text' id='price' value={price} onChange={(e) => setPrice(e.target.value)} />
-            <label htmlFor='price'>Link of the Image:</label>
-            <input type='text' id='link' value={link}  onChange={(e) => setLink(e.target.value)} />
-            {errorMessage && <p className='error'>{errorMessage}</p>} {/* Display error message */}
+            <label htmlFor='link'>Link of the Image:</label>
+            <input type='text' id='link' value={link} onChange={(e) => setLink(e.target.value)} />
+            {errorMessage && <p className='error'>{errorMessage}</p>}
             <button type="submit" className="btn" onClick={() => setAction('signUp')}>
-                ADD
+              ADD
             </button>
-            </form>
+          </form>
         </div>
-        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Addsection;

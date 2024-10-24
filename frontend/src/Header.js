@@ -37,9 +37,7 @@ const Header = () => {
         <div className='samplebox'>
           <a href='/properties'><h2>Properties</h2></a>
         </div>
-        <div className='samplebox'>
-          <a href='/profile'><h2>Profile</h2></a>
-        </div>
+        
         
         
         <div className='samplebox'>
