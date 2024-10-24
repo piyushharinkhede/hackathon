@@ -12,15 +12,7 @@ const Header = () => {
     navigate('/search');
   }
 
-  const fetchProfile = async () => {
-    const status = localStorage.getItem('token')
-    if (status){
-      navigate('/add');
-    }
-    else {
-      navigate('/login');
-    }
-  };
+  
 
   return (
     <div>
@@ -37,11 +29,13 @@ const Header = () => {
         <div className='samplebox'>
           <a href='/properties'><h2>Properties</h2></a>
         </div>
-        
+        <div className='samplebox'>
+          <a href='/login'><button className='addpy'>Login</button></a>
+        </div>
         
         
         <div className='samplebox'>
-          <button onClick={fetchProfile} className='addpy'>Add Property</button>
+          <a href='/add'><button className='addpy'>Add Property</button></a>
         </div>
         <div className='samplebox'></div>
       </div>
