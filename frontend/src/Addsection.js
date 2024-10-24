@@ -14,14 +14,7 @@ const Addsection = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const checkUser = () => {
-      if (!namee) {
-        navigate("/login");
-      }
-    };
-    checkUser();
-  }, [navigate, namee]);
+  
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
