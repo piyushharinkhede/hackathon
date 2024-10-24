@@ -20,16 +20,12 @@ const Login = () => {
   };
 
   const signIn = () => {
-    if (name === 'test' && password === 'password') {
+    
       toast.success("Sign In successful");
       localStorage.setItem('username', name);
       navigate('/');
-    } else {
-      toast.error("Incorrect Name or Password");
-      setErrorMessage('Failed to sign in. Please try again.');
-    }
-  };
-
+    
+  }
   const signUp = () => {
     navigate('/signup');
   };
